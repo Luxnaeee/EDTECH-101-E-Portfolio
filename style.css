@@ -3,6 +3,11 @@
     padding: 0;
     font-family:'Poppins', sans-serif
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 @media (min-width: 320px) {
     .header {
     background: #AB5141;
@@ -46,9 +51,16 @@
         text-decoration: none;
         text-align: right;
         color: #fff;
-        margin: 3px;
-        padding: 5px;
+        margin: 5px;
+        padding: 10px;
         font-size: 1rem;
+    }
+
+    #navbar nav li a:hover{
+        background-color: #FFF;
+        color: #AB5141;
+        border-radius: 2px;
+        font-weight: bold;
     }
 
     .header #navbar nav li a.active{
@@ -88,12 +100,17 @@
     #portfolio_links a{
         text-decoration: none;
         margin: 4px;
-        padding: 2px;
+        padding: 4px;
         font-size: 1.0rem;
         background-color: #AB5141;
         color: #fff;
         border-radius: 4px;
         font-weight: bold;
+    }
+
+    #portfolio_links a:hover{
+        background-color: #FFF;
+        color: #AB5141;
     }
 
     #my_image img {
@@ -119,12 +136,12 @@
     .about_me {
         text-align: justify;     
         width: 100%;
+        min-width: 512px;
         min-height: 54vh;
         background-color: #f2f2f2;
     }
 
     #basic_info {
-        max-width: 768px;
         margin: 0 auto;
     }
 
@@ -137,7 +154,6 @@
     #img1 {
         flex: 0 0 200px;
         text-align: center;
-        margin-right: 20px;
     }
 
     #img1 img{
@@ -224,6 +240,13 @@
         font-size: 16px;
     }
 
+    .header #navbar nav li a:hover{
+        background-color: #FFF;
+        color: #AB5141;
+        border-radius: 2px;
+        font-weight: bold;
+    }
+
     .header #navbar nav li a.active{
         background-color: #FFF;
         color: #AB5141;
@@ -273,6 +296,11 @@
         border-radius: 4px;
     }
 
+    #portfolio_links a:hover{
+        background-color: #FFF;
+        color: #AB5141;
+    }
+
     #my_image {
         flex: 0 0 275px;
         text-align: center;
@@ -281,7 +309,7 @@
 
     #my_image img{
         width: 100%;
-        max-width: 100%;
+        max-width: 275px;
         height: auto; 
         display: block;
         border-radius: 8px;
@@ -307,7 +335,7 @@
         align-items: center;      
         width: 100%;
         background-color: #f2f2f2;
-        gap: 20px;
+        gap: 10px;
     }
 
     #basic_info {
@@ -381,7 +409,7 @@
 
     .header #navbar #title a{
         color: #fff;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         padding: 5px;
         font-weight: bold;
     }
@@ -397,7 +425,14 @@
         color: #fff;
         margin: 5px;
         padding: 12px;
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .header #navbar nav li a:hover{
+        background-color: #FFF;
+        color: #AB5141;
+        border-radius: 2px;
+        font-weight: bold;
     }
 
     .header #navbar nav li a.active{
@@ -434,7 +469,7 @@
         flex: 1;      
         margin-left: 2px;
         text-align: left;  
-        font-size: 1.5rem; 
+        font-size: 1.3rem; 
         line-height: 1.5;
         padding-right: 10px;
     }
@@ -453,14 +488,19 @@
         border-radius: 4px;
     }
 
+    #portfolio_links a:hover{
+        background-color: #FFF;
+        color: #AB5141;
+    }
+
     #my_image {
-        flex: 0 0 350px;
+        flex: 0 0 300px;
         text-align: center;
     }
 
     #my_image img{
         width: 100%;
-        max-width: 350px;
+        max-width: 300px;
         height: auto; 
         display: block;
         border-radius: 8px;
@@ -485,7 +525,7 @@
         align-items: center;      
         width: 100%;
         background-color: #f2f2f2;
-        gap: 20px;
+        gap: 10px;
     }
 
     #basic_info {
@@ -497,7 +537,7 @@
     }
 
     #basic_info p{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         line-height: 2;
     }
 
