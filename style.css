@@ -54,6 +54,7 @@ html {
         margin: 5px;
         padding: 10px;
         font-size: 1rem;
+        transition: background-color 0.3s ease;
     }
 
     #navbar nav li a:hover{
@@ -68,6 +69,11 @@ html {
         color: #AB5141;
         border-radius: 2px;
         font-weight: bold;
+    }
+
+    #navbar nav li a.active:hover{
+        background-color: #AB5141;
+        color: #fff;
     }
 
     .front_page {
@@ -94,7 +100,11 @@ html {
     }
 
     #portfolio_links {
-        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2rem;
     }
 
     #portfolio_links a{
@@ -106,6 +116,7 @@ html {
         color: #fff;
         border-radius: 4px;
         font-weight: bold;
+        transition: background-color 0.3s ease;
     }
 
     #portfolio_links a:hover{
@@ -186,6 +197,27 @@ html {
         color: #fff;
         text-decoration: none;
         padding: 0 10px;
+    }
+
+    #scrollTopBtn {
+    position: fixed;
+    bottom: 35px;
+    right: 20px;
+    padding: 8px 12px;
+    font-size: 10px;
+    background-color: #AB5141;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    display: none;
+    }
+
+    #scrollTopBtn:hover {
+    background-color: #fff;
+    color: #AB5141;
     }
 }
 

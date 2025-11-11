@@ -32,7 +32,7 @@
                 <p>Hello! Welcome to Ivan's E-Portfolio for EDTECH 101</p>
                 <p>Click the links below to access different parts of the portfolio</p>
                 <div id="portfolio_links">
-                    <a href="#basic_info">ABOUT</a>
+                    <a href="#about_me">ABOUT</a>
                     <a href="">CLASS DISCUSSIONS</a>
                     <a href="">SESSIONS</a>
                 </div>
@@ -43,7 +43,7 @@
         <p>-</p>
         <p>-</p>
     </div>
-    <div class="about_me">
+    <div id="about_me"class="about_me">
         <div id="img1">
                 <img src="images/fxn 2025-04-03 182653.512.JPG" alt="">
             </div>
@@ -60,6 +60,20 @@
             </div>
         </footer>
     </div>
-</body>
+    <button id="scrollTopBtn">↑</button>
+    <script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
 
+    window.addEventListener("scroll", () => {
+    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    document.getElementById("scrollTopBtn").addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    });
+    </script>
+</body>
 </html>
