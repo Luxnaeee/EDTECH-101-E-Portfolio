@@ -136,7 +136,7 @@ html {
     .about_me {
         text-align: justify;     
         width: 100%;
-        min-width: 512px;
+        min-width: 320px;
         min-height: 54vh;
         background-color: #f2f2f2;
     }
@@ -533,7 +533,7 @@ html {
         padding: 20px;
         display: flex;
         align-items: center;
-        min-height: 25vh;
+        max-height: 25vh;
     }
 
     #basic_info p{
@@ -578,6 +578,27 @@ html {
         color: #fff;
         text-decoration: none;
         padding: 0 10px;
+    }
+
+    #scrollTopBtn {
+    position: fixed;
+    bottom: 35px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #AB5141;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    display: none;
+    }
+
+    #scrollTopBtn:hover {
+    background-color: #fff;
+    color: #AB5141;
     }
 }
 
