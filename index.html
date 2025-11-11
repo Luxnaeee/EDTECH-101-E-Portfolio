@@ -15,7 +15,7 @@
                 <div id="title">
                     <a href="index.html">Ivan's E-Portfolio</a>
                 </div>
-                <ul>
+                <ul class="dropdown-menu">
                     <li><a class="active" href="index.html">Home</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                 </ul>
@@ -61,19 +61,6 @@
         </footer>
     </div>
     <button id="scrollTopBtn">↑</button>
-    <script>
-    const scrollBtn = document.getElementById("scrollTopBtn");
-
-    window.addEventListener("scroll", () => {
-    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    });
-
-    document.getElementById("scrollTopBtn").addEventListener("click", function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-    });
-    </script>
 </body>
+<script src="app.js"></script>
 </html>

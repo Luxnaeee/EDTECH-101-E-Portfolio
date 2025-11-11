@@ -82,6 +82,7 @@ html {
         text-align: center;
         background-color: #f2f2f2;
     }
+    
     #short_introduction {
         max-width: 768px;
         margin: 0 auto;
@@ -103,8 +104,8 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
-        margin-top: 2rem;
+        gap: 0.5rem;
+        margin-top: 1rem;
     }
 
     #portfolio_links a{
@@ -124,12 +125,17 @@ html {
         color: #AB5141;
     }
 
+    #my_image{
+        display: flex;
+        flex: 0 0 200px;
+    }
+
     #my_image img {
-        display: block;        
-        max-width: 55%;     
+        width: 100%;       
+        max-width: 200px;     
         height: auto; 
-        padding-top: 215px;
-        margin: 0 auto;
+        margin: auto;
+        padding: 125px 0 0 0;
     }
 
     /*Divider*/
@@ -138,7 +144,6 @@ html {
         justify-content: center;
         align-items: center;
         background-color: #AB5141;
-        gap: 8px;
         color: #fff;
         font-size: 1rem;
     }
