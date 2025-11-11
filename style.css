@@ -117,25 +117,21 @@
 
     /*About Me*/
     .about_me {
-        display: flex;
-        justify-content: flex-start; 
-        align-items: center;      
+        text-align: justify;     
         width: 100%;
+        min-height: 72.5vh;
         background-color: #f2f2f2;
-        gap: 20px;
     }
 
     #basic_info {
-        flex: 1;
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        min-height: 25vh;
+        max-width: 768px;
+        margin: 0 auto;
     }
 
     #basic_info p{
         font-size: 1.2rem;
         line-height: 2;
+        padding: 0 20px;
     }
 
     #img1 {
