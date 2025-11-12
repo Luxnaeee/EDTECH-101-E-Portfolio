@@ -44,7 +44,7 @@ html {
         flex-direction: column-reverse;
         justify-content: right;
         align-items: center;
-        flex: 0 0 250px;
+        flex: 0 0 275px;
         margin-bottom: 20px;
     }
 
@@ -58,7 +58,7 @@ html {
 
     #concept-map-left img,
     #concept-map-right img {
-        max-width: 90%;
+        max-width: 100%;
         height: auto;
         padding: 5px;
     }
@@ -242,7 +242,6 @@ html {
         margin: 0 auto;
         padding: 10px;
         border-radius: 8px;
-        border: 4px dashed #AB5141;
     }
 
     #about_us {
@@ -281,17 +280,16 @@ html {
         display: flex;
         justify-content: left;
         align-items: center;
-        flex: 0 0 250px;
+        flex: 0 0 275px;
     }
 
     #concept-map-left img{
         width: 100%;
-        max-width: 250px;
+        max-width: 275px;
         height: auto; 
         display: block;
         margin: 0;
         border-radius: 8px;
-        border: 4px dashed #AB5141;
     }
 
     #concept-map-left p{
@@ -305,12 +303,11 @@ html {
     }
 
     #concept-map-right img{
-        max-width: 250px;
+        max-width: 275px;
         height: auto; 
         display: block;
         margin: 0;
         border-radius: 8px;
-        border: 4px dashed #AB5141;
     }
 
     #concept-map-right p{
