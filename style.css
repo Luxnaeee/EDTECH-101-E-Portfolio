@@ -8,7 +8,7 @@ html {
   scroll-behavior: smooth;
 }
 
-@media (min-width: 320px) {
+@media (max-width: 768px) {
     .header {
     background: #AB5141;
     }
@@ -78,7 +78,7 @@ html {
 
     .front_page {
         width: 100%;  
-        min-height: 100vh; 
+        min-height: 92vh; 
         text-align: center;
         background-color: #f2f2f2;
     }
@@ -135,7 +135,7 @@ html {
         max-width: 200px;     
         height: auto; 
         margin: auto;
-        padding: 125px 0 0 0;
+        padding: 190px 0 0 0;
     }
 
     /*Divider*/
@@ -259,6 +259,11 @@ html {
         font-weight: bold;
     }
 
+    #title a{
+        text-decoration: none;
+        color: #FFF;
+    }
+
     .header nav ul{
         display: flex;
         list-style: none;
@@ -320,6 +325,9 @@ html {
     }
 
     #portfolio_links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         margin-top: 20px;
     }
 
@@ -482,7 +490,7 @@ html {
     /*Landing Page*/
     .front_page {
         width: 100%;  
-        min-height: 91vh; 
+        min-height: 92.5vh; 
         background-color: #f2f2f2;    
         display: flex;
         justify-content: center;
