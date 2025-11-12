@@ -8,7 +8,34 @@ html {
   scroll-behavior: smooth;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
+    #portfolio_links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+     #portfolio_links a{
+        text-decoration: none;
+        margin: 4px;
+        padding: 4px;
+        font-size: 1.0rem;
+        background-color: #AB5141;
+        color: #fff;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    #portfolio_links a:hover{
+        background-color: #FFF;
+        color: #AB5141;
+    }
+}
+
+@media (min-width: 320px) {
     .header {
     background: #AB5141;
     }
@@ -100,31 +127,6 @@ html {
         padding: 5px;
     }
 
-    #portfolio_links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        margin-top: 1rem;
-    }
-
-    #portfolio_links a{
-        text-decoration: none;
-        margin: 4px;
-        padding: 4px;
-        font-size: 1.0rem;
-        background-color: #AB5141;
-        color: #fff;
-        border-radius: 4px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-    }
-
-    #portfolio_links a:hover{
-        background-color: #FFF;
-        color: #AB5141;
-    }
-
     #my_image{
         display: flex;
         flex: 0 0 200px;
@@ -135,7 +137,7 @@ html {
         max-width: 200px;     
         height: auto; 
         margin: auto;
-        padding: 190px 0 0 0;
+        padding: 210px 0 0 0;
     }
 
     /*Divider*/
@@ -259,11 +261,6 @@ html {
         font-weight: bold;
     }
 
-    #title a{
-        text-decoration: none;
-        color: #FFF;
-    }
-
     .header nav ul{
         display: flex;
         list-style: none;
@@ -326,7 +323,7 @@ html {
 
     #portfolio_links {
         display: flex;
-        flex-direction: row;
+        justify-content: center;
         align-items: center;
         margin-top: 20px;
     }
@@ -490,7 +487,7 @@ html {
     /*Landing Page*/
     .front_page {
         width: 100%;  
-        min-height: 92.5vh; 
+        min-height: 91vh; 
         background-color: #f2f2f2;    
         display: flex;
         justify-content: center;
