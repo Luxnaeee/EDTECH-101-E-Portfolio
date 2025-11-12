@@ -33,6 +33,41 @@ html {
         background-color: #FFF;
         color: #AB5141;
     }
+
+    .concept-maps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #concept-map-right {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: right;
+        align-items: center;
+        flex: 0 0 250px;
+        margin-bottom: 20px;
+    }
+
+    #concept-map-left {
+        width: 100%;
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #concept-map-left img,
+    #concept-map-right img {
+        max-width: 90%;
+        height: auto;
+        padding: 5px;
+    }
+
+    #concept-map-left p,
+    #concept-map-right p {
+        padding: 1rem;
+        text-align: center;
+    }
 }
 
 @media (min-width: 320px) {
@@ -188,6 +223,9 @@ html {
     }
 
     /*Portfolio*/
+    .group_intro{
+        min-height: 100vh;
+    }
     #img2 {
         display: flex;
         justify-content: center;
@@ -226,6 +264,63 @@ html {
         align-items: center;
         text-align: justify;
         padding: 10px;
+        font-size: 0.9rem;
+        margin: 0 auto;
+    }
+
+    .portfolio-start h1 {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .concept-maps{
+        max-width: 768px;
+    }
+
+    #concept-map-left {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex: 0 0 250px;
+    }
+
+    #concept-map-left img{
+        width: 100%;
+        max-width: 250px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        border-radius: 8px;
+        border: 4px dashed #AB5141;
+    }
+
+    #concept-map-left p{
+        width: 80%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        font-size: 0.8rem;
+    }
+
+    #concept-map-right img{
+        max-width: 250px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        border-radius: 8px;
+        border: 4px dashed #AB5141;
+    }
+
+    #concept-map-right p{
+        width: 80%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        font-size: 0.8rem;
     }
 
     #socials {
@@ -454,23 +549,118 @@ html {
     }
 
     /*Portfolio*/
+    .group_intro{
+        min-height: 100vh;
+    }
     #img2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex: 0 0 540px;
+        flex: 0 0 480px;
         margin: 20px;
     }
 
     #img2 img{
         width: 100%;
-        max-width: 540px;
+        max-width: 480px;
         height: auto; 
         display: block;
         margin: 0 auto;
         padding: 20px;
         border-radius: 8px;
         border: 4px dashed #AB5141;
+    }
+
+    #about_us {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1080px;
+    }
+
+    #about_us h1 {
+        font-size: 1.3rem;
+    }
+
+    #about_us p{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 10px;
+        font-size: 0.9rem;
+        margin: 0 auto;
+    }
+
+    .portfolio-start h1 {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .concept-maps{
+        max-width: 1920px;
+    }
+
+    #concept-map-left {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex: 0 0 350px;
+        margin: 1rem;
+    }
+
+    #concept-map-left img{
+        width: 100%;
+        max-width: 350px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 10px;
+        border-radius: 8px;
+        border: 4px dashed #AB5141;
+    }
+
+    #concept-map-left p{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 2rem;
+        font-size: 1rem;
+    }
+
+    #concept-map-right {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        flex: 0 0 350px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    #concept-map-right img{
+        max-width: 350px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 10px;
+        border-radius: 8px;
+        border: 4px dashed #AB5141;
+    }
+
+    #concept-map-right p{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        text-align: justify;
+        padding: 2rem;
+        font-size: 1rem;
     }
 
     #socials {
@@ -666,23 +856,114 @@ html {
     }
 
     /*Portfolio*/
+    .group_intro{
+        min-height: 50vh;
+    }
     #img2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex: 0 0 720px;
+        flex: 0 0 450px;
         margin: 20px;
     }
 
     #img2 img{
         width: 100%;
-        max-width: 720px;
+        max-width: 450px;
         height: auto; 
         display: block;
         margin: 0 auto;
         padding: 20px;
         border-radius: 8px;
         border: 4px dashed #AB5141;
+    }
+
+    #about_us {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1920px;
+    }
+
+    #about_us h1 {
+        font-size: 1.3rem;
+    }
+
+    #about_us p{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 10px;
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+
+    .portfolio-start h1 {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
+    #concept-map-left {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex: 0 0 450px;
+        margin: 1rem;
+    }
+
+    #concept-map-left img{
+        width: 100%;
+        max-width: 450px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 10px;
+        border-radius: 8px;
+        border: 4px dashed #AB5141;
+    }
+
+    #concept-map-left p{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 2rem;
+        font-size: 1rem;
+    }
+
+    #concept-map-right {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        flex: 0 0 450px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    #concept-map-right img{
+        max-width: 450px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 10px;
+        border-radius: 8px;
+        border: 4px dashed #AB5141;
+    }
+
+    #concept-map-right p{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        text-align: justify;
+        padding: 2rem;
+        font-size: 1rem;
     }
 
     /*Footer Code*/
