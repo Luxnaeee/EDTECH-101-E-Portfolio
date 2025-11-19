@@ -68,13 +68,13 @@ html {
         padding: 1rem;
     }
 
-    
-    #sessions {
+    .videos {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    #vid-left{
+    #video-left {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -83,6 +83,22 @@ html {
         height: 200px;
         background-color: black;
         margin: 0 auto;
+    }
+
+    #video-right {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        overflow: hidden;
+        width: 275px;
+        height: 275px;
+        background-color: black;
+        margin: 0 auto;
+        order: 1;
+    }
+
+    #video-right-p {
+        order: 2;
     }
 
     video{
@@ -299,13 +315,6 @@ html {
         max-width: 768px;
     }
 
-    #concept-map-left {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        flex: 0 0 275px;
-    }
-
     #concept-map-left img{
         width: 100%;
         max-width: 275px;
@@ -347,17 +356,40 @@ html {
         max-width: 768px;
     }
 
-    #vid-text-left p{
-        display: flex;
+    #video-left {
+        width: 100%;
+        max-width: 275px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #video-left-p {
+        width: 100%;
         flex: 1;
+        display: flex;
         justify-content: center;
         align-items: center;
         text-align: justify;
-        overflow: hidden;
-        margin: 0 auto;
-        width: 80%;
         font-size: 0.8rem;
-        padding: 10px;
+    }
+
+    #video-right{
+        width: 100%;
+        max-width: 275px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #video-right-p {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        font-size: 0.8rem;
     }
 
     #socials {
