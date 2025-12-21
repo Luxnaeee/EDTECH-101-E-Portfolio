@@ -240,6 +240,7 @@ html {
     .concept-maps {
         flex-direction: column;
         align-items: center;
+        max-width: 768px;
     }
 
     #concept-map-right {
@@ -271,10 +272,6 @@ html {
         border-radius: 8px;
     }
 
-    .concept-maps{
-        max-width: 768px;
-    }
-
     #concept-map-left p, 
     #concept-map-right p{
         width: 100%;
@@ -298,36 +295,43 @@ html {
         font-size: 1.5rem;
     }
 
-
     .videos {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
-        
+        width: 100%;
     }
 
-    .video-block {
+    .video-item-right {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: right;
+        align-items: center;
+        flex: 0 0 275px;
+        margin-bottom: 20px;
+    }
+    
+    .video-item-left{
+        width: 100%;
+        margin: 1rem 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        margin: 0 auto;
     }
 
-    .video-left video,
-    .video-right video {
-        width: 100%;
+    .video-item-right video, 
+    .video-item-left video {
+        width: 70%;
         height: auto;
         aspect-ratio: 1/1;
         object-fit: contain;
         background-color: black;
         border-radius: 8px;
-        max-width: 320px;
+        max-width: 320x;
     }
 
-    .video-left-p,
-    .video-right-p {
+    .video-item-right p,
+    .video-item-left p {
         width: 100%;
         max-width: fit-content;
         flex: 1;
@@ -337,13 +341,6 @@ html {
         text-align: justify;
         font-size: 0.9rem;
         padding: 1rem;
-    }
-
-    video{
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1/1;
-        object-fit: contain;
     }
 
     #socials {
@@ -526,7 +523,6 @@ html {
         display: block;
         border-radius: 8px;
         padding: 10px;
-        border: 4px dashed #AB5141;  
     }
 
     /*Divider*/
@@ -606,7 +602,7 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 1080px;
+        max-width: 1024px;
     }
 
     #about_us h1 {
@@ -625,13 +621,32 @@ html {
         margin: 0 auto;
     }
 
+    .The-Seminar {
+        display: block;
+        max-width: 1024px;
+    }
+
+    .The-Seminar h1 {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .The-Seminar #text p{
+        width: 95%;
+        display: flex;
+        text-align: justify;
+        padding: 10px;
+        font-size: 0.9rem;
+        margin: 0 auto;
+    }
+
     .portfolio-start h1 {
         padding: 1rem;
         font-size: 1.5rem;
     }
 
     .concept-maps{
-        max-width: 1920px;
+        max-width: 1024px;
     }
 
     #concept-map-left {
@@ -640,6 +655,15 @@ html {
         align-items: center;
         flex: 0 0 350px;
         margin: 1rem;
+    }
+
+    #concept-map-right {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        flex: 0 0 350px;
+        margin-right: 20px;
+        margin-bottom: 20px;
     }
 
     #concept-map-left img, #concept-map-right img{
@@ -665,28 +689,37 @@ html {
         font-size: 1rem;
     }
 
-    #concept-map-right {
-        display: flex;
-        justify-content: right;
-        align-items: center;
-        flex: 0 0 350px;
-        margin-right: 20px;
-        margin-bottom: 20px;
-    }
-
     .videos {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
+        flex-wrap: wrap; /* allows wrapping on smaller screens */
+        justify-content: center;
+        gap: 40px; /* adds space between items */
+        margin: 2rem auto;
+    }
+
+    .video-item-right video, 
+    .video-item-left video {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        border-radius: 8px;
+        border: 4px dashed #AB5141;
+        background-color: black;
+        padding: 10px;
+        aspect-ratio: 1/1;
+        object-fit: contain;
         
     }
 
-    .video-block {
-        max-width: 1920px;
+    .video-item-left, .video-item-right {
+        display: flex;
+        justify-content: left/right;
+        align-items: center;
+        flex: 0 0 350px;
+        margin: 1rem;
     }
 
-    .video-left{
+    .video-item-left {
         display: flex;
         justify-content: left;
         align-items: center;
@@ -694,28 +727,17 @@ html {
         margin: 1rem;
     }
 
-    .video-right{
-        
+    .video-item-right {
         display: flex;
         justify-content: right;
         align-items: center;
+        flex: 0 0 350px;
         margin-right: 20px;
         margin-bottom: 20px;
     }
 
-    .video-left video,
-    .video-right video {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1/1;
-        object-fit: contain;
-        background-color: black;
-        border-radius: 8px;
-        max-width: 350px;
-    }
-
-    .video-left-p,
-    .video-right-p {
+    .video-item-right p,
+    .video-item-left p {
         width: 100%;
         flex: 1;
         display: flex;
@@ -726,12 +748,6 @@ html {
         font-size: 1rem;
     }
 
-    video{
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1/1;
-        object-fit: contain;
-    }
 
     #socials {
         display: flex;
@@ -782,9 +798,23 @@ html {
     background: #AB5141;
     }
 
+    .header #title{
+        font-size: 16px;
+    }
+
     .header title{
         display: flex;
         justify-content: flex;
+    }
+
+    .header #title a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    .header #navbar{
+        font-size: 24px;
     }
 
     .header #navbar nav{
@@ -792,12 +822,13 @@ html {
         justify-content: space-between;
         align-items: center;
         list-style: none;
+        padding: 10px, 20px;
     }
 
-    .header #navbar #title a{
+    .header #navbar #title{
         color: #fff;
-        font-size: 1.3rem;
-        padding: 5px;
+        padding: 10px;
+        font-size: 20px;
         font-weight: bold;
     }
 
@@ -806,13 +837,17 @@ html {
         list-style: none;
     }
 
+    .header #navbar nav li{
+        margin-bottom: 5px;;
+    }
+
     .header #navbar nav li a{
         text-decoration: none;
         text-align: right;
         color: #fff;
         margin: 5px;
-        padding: 12px;
-        font-size: 1rem;
+        padding: 8px;
+        font-size: 16px;
     }
 
     .header #navbar nav li a:hover{
@@ -825,20 +860,21 @@ html {
     .header #navbar nav li a.active{
         background-color: #FFF;
         color: #AB5141;
-        border-radius: 2px;
+        border-radius: 2rem;
         font-weight: bold;
+        padding: 0.5rem;
+        margin-right: 7px;
     }
 
     /*Landing Page*/
     .front_page {
         width: 100%;  
-        min-height: 91vh; 
+        min-height: 93vh; 
         background-color: #f2f2f2;    
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0 20px;
-        margin: 0 auto;
         box-sizing: border-box;
     }
 
@@ -846,30 +882,31 @@ html {
         display: flex;              
         justify-content: space-between;
         align-items: center;
+        width: 100%;
         margin: 0 auto;
         gap: 20px;
-        min-width: 1024px; 
-        width: 100%;  
     }
 
     #intro_text {
         flex: 1;      
         margin-left: 2px;
         text-align: left;  
-        font-size: 1.3rem; 
-        line-height: 1.5;
-        padding-right: 10px;
+        font-size: 1.2rem; 
+        line-height: 1.5;    
     }
 
     #portfolio_links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 20px;
     }
 
     #portfolio_links a{
         text-decoration: none;
-        margin: 4px;
+        margin: 2px;
         padding: 4px;
-        font-size: 1rem;
+        font-size: 0.8rem;
         background-color: #AB5141;
         color: #fff;
         border-radius: 4px;
@@ -881,17 +918,18 @@ html {
     }
 
     #my_image {
-        flex: 0 0 300px;
+        flex: 0 0 275px;
         text-align: center;
+        padding: 0 60px;
     }
 
     #my_image img{
         width: 100%;
-        max-width: 300px;
+        max-width: 275px;
         height: auto; 
         display: block;
         border-radius: 8px;
-        border: 4px dashed #AB5141;
+        padding: 10px; 
     }
 
     /*Divider*/
@@ -942,7 +980,6 @@ html {
         margin: 0 auto;
         padding: 20px;
         border-radius: 8px;
-        border: 4px dashed #AB5141;
 
     }
 
