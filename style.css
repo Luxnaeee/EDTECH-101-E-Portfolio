@@ -120,7 +120,7 @@ html {
     .divider {
         display: inline-block;
         width: 100%;
-        height: 3vh;
+        height: 4px;
         vertical-align: middle;
         background-color: #AB5141;
         color: #fff;
@@ -207,8 +207,27 @@ html {
         margin: 0 auto;
     }
 
+    .The-Seminar {
+        display: block;
+        max-width: 1024px;
+    }
+
+    .The-Seminar h1 {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .The-Seminar #text p{
+        width: 95%;
+        display: flex;
+        text-align: justify;
+        padding: 10px;
+        font-size: 0.9rem;
+        margin: 0 auto;
+    }
+
     .portfolio-start h1 {
-        padding: 1rem 1.3rem 0 ;
+        padding: 0.5rem ;
         font-size: 1.5rem;
     }
 
@@ -531,9 +550,11 @@ html {
         justify-content: center;
         align-items: center;
         background-color: #AB5141;
-        gap: 8px;
+        margin-top: 2vh;
         color: #fff;
         font-size: 1rem;
+        width: 100%;
+        height: 4px; /* thin line */
     }
 
     /*About Me*/
@@ -654,7 +675,7 @@ html {
         justify-content: left;
         align-items: center;
         flex: 0 0 350px;
-        margin: 1rem;
+        margin: 0.2rem;
     }
 
     #concept-map-right {
@@ -674,7 +695,6 @@ html {
         margin: 0;
         padding: 10px;
         border-radius: 8px;
-        border: 4px dashed #AB5141;
     }
 
     #concept-map-left p, 
@@ -690,9 +710,6 @@ html {
     }
 
     .videos {
-        display: flex;
-        flex-wrap: wrap; /* allows wrapping on smaller screens */
-        justify-content: center;
         gap: 40px; /* adds space between items */
         margin: 2rem auto;
     }
@@ -700,30 +717,22 @@ html {
     .video-item-right video, 
     .video-item-left video {
         width: 100%;
-        max-width: 450px;
+        max-width: 350px;
         height: auto;
         border-radius: 8px;
-        border: 4px dashed #AB5141;
         background-color: black;
         padding: 10px;
         aspect-ratio: 1/1;
         object-fit: contain;
+        display: block;
         
-    }
-
-    .video-item-left, .video-item-right {
-        display: flex;
-        justify-content: left/right;
-        align-items: center;
-        flex: 0 0 350px;
-        margin: 1rem;
     }
 
     .video-item-left {
         display: flex;
         justify-content: left;
         align-items: center;
-        flex: 0 0 350px;
+        flex: 0 0 450px;
         margin: 1rem;
     }
 
@@ -731,7 +740,7 @@ html {
         display: flex;
         justify-content: right;
         align-items: center;
-        flex: 0 0 350px;
+        flex: 0 0 450px;
         margin-right: 20px;
         margin-bottom: 20px;
     }
@@ -798,10 +807,6 @@ html {
     background: #AB5141;
     }
 
-    .header #title{
-        font-size: 16px;
-    }
-
     .header title{
         display: flex;
         justify-content: flex;
@@ -811,10 +816,6 @@ html {
         color: white;
         text-decoration: none;
         font-size: 1.2rem;
-    }
-
-    .header #navbar{
-        font-size: 24px;
     }
 
     .header #navbar nav{
@@ -828,7 +829,6 @@ html {
     .header #navbar #title{
         color: #fff;
         padding: 10px;
-        font-size: 20px;
         font-weight: bold;
     }
 
@@ -837,24 +837,22 @@ html {
         list-style: none;
     }
 
-    .header #navbar nav li{
-        margin-bottom: 5px;;
-    }
-
     .header #navbar nav li a{
         text-decoration: none;
         text-align: right;
         color: #fff;
         margin: 5px;
         padding: 8px;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .header #navbar nav li a:hover{
         background-color: #FFF;
         color: #AB5141;
-        border-radius: 2px;
+        border-radius: 2rem;
         font-weight: bold;
+        padding: 0.5rem;
+        margin-right: 7px;
     }
 
     .header #navbar nav li a.active{
@@ -938,9 +936,11 @@ html {
         justify-content: center;
         align-items: center;
         background-color: #AB5141;
-        gap: 8px;
+        margin-top: 2vh;
         color: #fff;
         font-size: 1rem;
+        width: 100%;
+        height: 4px; /* thin line */
     }
 
     /*About Me*/
@@ -1003,7 +1003,6 @@ html {
         margin: 0 auto;
         padding: 20px;
         border-radius: 8px;
-        border: 4px dashed #AB5141;
     }
 
     #about_us {
@@ -1023,6 +1022,25 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: justify;
+        padding: 10px;
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+
+    .The-Seminar {
+        display: block;
+        max-width: 1024px;
+    }
+
+    .The-Seminar h1 {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .The-Seminar #text p{
+        width: 95%;
+        display: flex;
         text-align: justify;
         padding: 10px;
         font-size: 1rem;
@@ -1050,7 +1068,6 @@ html {
         margin: 0;
         padding: 10px;
         border-radius: 8px;
-        border: 4px dashed #AB5141;
     }
 
     #concept-map-left p{
@@ -1080,7 +1097,6 @@ html {
         margin: 0;
         padding: 10px;
         border-radius: 8px;
-        border: 4px dashed #AB5141;
     }
 
     #concept-map-right p{
@@ -1093,6 +1109,76 @@ html {
         padding: 2rem;
         font-size: 1rem;
     }
+
+    #text p{
+        width: 95%;
+        display: flex;
+        text-align: justify;
+        padding: 10px;
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+
+    .videos {
+        margin: 2rem auto;
+    }
+
+    .video-item-right video, 
+    .video-item-left video {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 8px;
+        background-color: black;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .video-item-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .video-item-left img{
+        width: 100%;
+        max-width: 560px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    
+
+    .video-item-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    
+    .description {
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        gap: 340px;
+    }
+
+    .description p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        gap: 50px;
+        font-weight: bold;
+    }
+
 
     /*Footer Code*/
     #socials {
