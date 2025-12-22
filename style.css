@@ -965,6 +965,7 @@ html {
     #basic_info p{
         font-size: 1.2rem;
         line-height: 2;
+        text-align: justify;
     }
 
     #img1 {
@@ -1002,7 +1003,26 @@ html {
         height: auto; 
         display: block;
         margin: 0 auto;
-        padding: 20px;
+        padding-top: 85px;
+        padding-left: 3vh;
+        border-radius: 8px;
+    }
+
+    #img3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 450px;
+    }
+
+    #img3 img{
+        width: 100%;
+        max-width: 450px;
+        height: auto; 
+        display: block;
+        margin: 0 auto;
+        padding-top: 3vh;
+        padding-left: 3vh;
         border-radius: 8px;
     }
 
@@ -1013,6 +1033,7 @@ html {
         max-width: 1920px;
         flex-direction: column;
         padding: 1rem;
+        padding-top: 80px;
     }
 
     #about_us h1 {
@@ -1020,18 +1041,20 @@ html {
         font-weight: bold; 
         text-align: center; 
         margin-bottom: 10px;
+        padding: 5px;
     }
 
     #about_us p{
-        width: 100%;
+        width: 90%;
         flex: 1;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         text-align: justify;
         font-size: 1.2rem;
         margin: 0 auto;
         line-height: 2;
+        padding-top: 15px;
     }
 
     .The-Seminar {
@@ -1061,6 +1084,7 @@ html {
 
     .portfolio-start h1 {
         padding-top: 1rem;
+        padding: 0.7rem;
         padding-left: 1rem;
         font-size: 1.7rem;
     }
@@ -1077,6 +1101,7 @@ html {
         align-items: center;
         flex: 0 0 450px;
         margin-left: 1rem;
+        padding-bottom: 20px;
     }
 
     #concept-map-left img{
@@ -1096,11 +1121,11 @@ html {
         justify-content: left;
         align-items: center;
         text-align: justify;
-        padding: 1rem;
+        padding: 1.5rem;
         font-size: 1.2rem;
         line-height: 2;
     }
-
+    
     #concept-map-lefts {
         display: flex;
         justify-content: center;
@@ -1119,6 +1144,27 @@ html {
     }
 
     #concept-map-lefts p{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 2rem;
+        font-size: 1rem;
+    }
+
+    #concept-map-lefts-2 img{
+        width: 100%;
+        max-width: 240px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 5px;
+        border-radius: 8px;
+    }
+
+    #concept-map-lefts-2 p{
         width: 100%;
         flex: 1;
         display: flex;
@@ -1187,13 +1233,33 @@ html {
         font-size: 1rem;
     }
 
+    #text{
+        width: 100%;
+    }
+
     #text p{
-        width: 95%;
+        flex: 1;
         display: flex;
+        justify-content: left;
+        align-items: center;
         text-align: justify;
-        padding: 5px;
-        font-size: 1rem;
-        margin: 0 auto;
+        padding: 1rem;
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+    
+    #text2 {
+        width: 100%;
+    }
+
+    #text2 p{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 2;
     }
 
     #canva {
@@ -1211,6 +1277,12 @@ html {
 
     .videos {
         margin: 1rem auto;
+        gap: 20px;
+    }
+
+    .videos2 {
+        justify-content: center;
+        align-items: center;
         gap: 20px;
     }
 
@@ -1242,19 +1314,19 @@ html {
         display: flex;
         justify-content: left;
         align-items: left;
-        padding-left: 10vh;
+        padding-left: 5vh;
         gap: 10px;
     }
 
     .video-item-lefts p{
-        width: 100%;
         flex: 1;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         text-align: justify;
-        padding: 5px;
-        font-size: 1rem;
+        padding: 1.5rem;
+        font-size: 1.2rem;
+        line-height: 2;
     }
 
     .video-item-lefts video {
@@ -1268,7 +1340,65 @@ html {
         display: block;
     }
 
+    .video-item-lefts2 video {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 8px;
+        background-color: black;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+        display: block;
+    }
+
     .video-item-lefts img{
+        width: 100%;
+        max-width: 560px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 5px;
+        border-radius: 8px;
+    }
+
+    .video-item-lefts2 {
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .video-item-lefts3 {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        padding-left: 5vh;
+        gap: 10px;
+    }
+
+    .video-item-lefts3 img{
+        width: 100%;
+        max-width: 320px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding-bottom:20px;
+        border-radius: 8px;
+    }
+
+    .video-item-lefts3 p{
+        flex: 1;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: justify;
+        padding: 1.5rem;
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+
+    .video-item-lefts2 img{
         width: 100%;
         max-width: 560px;
         height: auto; 
@@ -1310,6 +1440,7 @@ html {
         justify-content: center;
         align-items: center;
         margin: 1rem;
+        font-size: 1rem;
         gap: 50px;
         font-weight: bold;
     }
@@ -1319,7 +1450,8 @@ html {
         justify-content: center;
         align-items: center;
         flex: 0 0 450px;
-        margin: 1rem;
+        margin: 0.5rem;
+        gap: 20px;
     }
 
     #session-3 img{ 
@@ -1327,9 +1459,7 @@ html {
         max-width: 450px;
         height: auto; 
         display: flex;
-        margin: 5x;
-        padding: 10px;
-        border-radius: 8px;
+        margin: 0; 
     }
 
 
