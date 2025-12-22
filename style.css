@@ -867,7 +867,7 @@ html {
     /*Landing Page*/
     .front_page {
         width: 100%;  
-        min-height: 93vh; 
+        min-height: 100vh; 
         background-color: #f2f2f2;    
         display: flex;
         justify-content: center;
@@ -887,8 +887,10 @@ html {
 
     #intro_text {
         flex: 1;      
-        margin-left: 2px;
-        text-align: left;  
+        margin-left: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         font-size: 1.2rem; 
         line-height: 1.5;    
     }
@@ -904,7 +906,7 @@ html {
         text-decoration: none;
         margin: 2px;
         padding: 4px;
-        font-size: 0.8rem;
+        font-size: 1rem;
         background-color: #AB5141;
         color: #fff;
         border-radius: 4px;
@@ -936,7 +938,6 @@ html {
         justify-content: center;
         align-items: center;
         background-color: #AB5141;
-        margin-top: 2vh;
         color: #fff;
         font-size: 1rem;
         width: 100%;
@@ -951,14 +952,14 @@ html {
         width: 100%;
         background-color: #f2f2f2;
         gap: 10px;
+        min-height: 90vh;
     }
 
     #basic_info {
         flex: 1;
-        padding: 20px;
+        padding: 2rem;
         display: flex;
         align-items: center;
-        max-height: 25vh;
     }
 
     #basic_info p{
@@ -977,7 +978,6 @@ html {
         max-width: 250px;
         height: auto; 
         display: block;
-        margin: 0 auto;
         padding: 20px;
         border-radius: 8px;
 
@@ -986,13 +986,14 @@ html {
     /*Portfolio*/
     .group_intro{
         min-height: 50vh;
+        background-color: #f2f2f2;
+
     }
     #img2 {
         display: flex;
         justify-content: center;
         align-items: center;
         flex: 0 0 450px;
-        margin: 20px;
     }
 
     #img2 img{
@@ -1010,10 +1011,15 @@ html {
         justify-content: center;
         align-items: center;
         max-width: 1920px;
+        flex-direction: column;
+        padding: 1rem;
     }
 
     #about_us h1 {
-        font-size: 1.3rem;
+        font-size: 1.5rem; 
+        font-weight: bold; 
+        text-align: center; 
+        margin-bottom: 10px;
     }
 
     #about_us p{
@@ -1023,18 +1029,20 @@ html {
         justify-content: center;
         align-items: center;
         text-align: justify;
-        padding: 10px;
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin: 0 auto;
+        line-height: 2;
     }
 
     .The-Seminar {
         display: block;
-        max-width: 1024px;
+        min-width: 1024px;
+        background-color: #f2f2f2;
     }
 
     .The-Seminar h1 {
-        padding: 1rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
         font-size: 1.5rem;
     }
 
@@ -1047,9 +1055,20 @@ html {
         margin: 0 auto;
     }
 
+    .portfolio-start{
+        background-color: #f2f2f2;
+    }
+
     .portfolio-start h1 {
-        padding: 1rem;
-        font-size: 1.5rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        font-size: 1.7rem;
+    }
+
+    .sessions h1{
+        padding-top: 1rem;
+        padding-left: 1rem;
+        font-size: 1.8rem;
     }
 
     #concept-map-left {
@@ -1057,7 +1076,7 @@ html {
         justify-content: left;
         align-items: center;
         flex: 0 0 450px;
-        margin: 1rem;
+        margin-left: 1rem;
     }
 
     #concept-map-left img{
@@ -1066,11 +1085,40 @@ html {
         height: auto; 
         display: block;
         margin: 0;
-        padding: 10px;
+        padding:5px;
         border-radius: 8px;
     }
 
     #concept-map-left p{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: justify;
+        padding: 1rem;
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+
+    #concept-map-lefts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 450px;
+    }
+
+    #concept-map-lefts img{
+        width: 100%;
+        max-width: 240px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 5px;
+        border-radius: 8px;
+    }
+
+    #concept-map-lefts p{
         width: 100%;
         flex: 1;
         display: flex;
@@ -1085,7 +1133,7 @@ html {
         display: flex;
         justify-content: right;
         align-items: center;
-        flex: 0 0 450px;
+        flex: 0 0 240px;
         margin-right: 20px;
         margin-bottom: 20px;
     }
@@ -1106,7 +1154,36 @@ html {
         justify-content: right;
         align-items: center;
         text-align: justify;
-        padding: 2rem;
+        padding: 1rem;
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+
+    #concept-map-rights {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex: 0 0 450px;
+    }
+
+    #concept-map-rights img{
+        width: 100%;
+        max-width: 320px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding-left: 10vh;
+        border-radius: 8px;
+    }
+
+    #concept-map-rights p{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 1rem;
         font-size: 1rem;
     }
 
@@ -1114,13 +1191,31 @@ html {
         width: 95%;
         display: flex;
         text-align: justify;
-        padding: 10px;
+        padding: 5px;
         font-size: 1rem;
         margin: 0 auto;
     }
 
+    #canva {
+        position: relative; 
+        margin-left: 20px;
+        width: 100%;
+        max-width: 400px;
+        aspect-ratio: 16/9;
+        height: 100%;
+        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
+        overflow: hidden;        
+        border-radius: 8px; 
+        will-change: transform;
+    }
+
     .videos {
-        margin: 2rem auto;
+        margin: 1rem auto;
+        gap: 20px;
+    }
+
+    .video-item-left, .video-item-right { 
+        margin: 0.5rem; /* reduce margins */
     }
 
     .video-item-right video, 
@@ -1141,6 +1236,46 @@ html {
         justify-content: center;
         align-items: center;
         gap: 50px;
+    }
+
+    .video-item-lefts {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        padding-left: 10vh;
+        gap: 10px;
+    }
+
+    .video-item-lefts p{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+    .video-item-lefts video {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 8px;
+        background-color: black;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+        display: block;
+    }
+
+    .video-item-lefts img{
+        width: 100%;
+        max-width: 560px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 5px;
+        border-radius: 8px;
     }
 
     .video-item-left img{
@@ -1177,6 +1312,24 @@ html {
         margin: 1rem;
         gap: 50px;
         font-weight: bold;
+    }
+
+    #session-3{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 450px;
+        margin: 1rem;
+    }
+
+    #session-3 img{ 
+        width: 100%;
+        max-width: 450px;
+        height: auto; 
+        display: flex;
+        margin: 5x;
+        padding: 10px;
+        border-radius: 8px;
     }
 
 
