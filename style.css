@@ -406,7 +406,7 @@ html {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1366px) {
+@media (min-width: 768px) and (max-width: 1360px) {
     .header {
     background: #AB5141;
     }
@@ -802,7 +802,7 @@ html {
     }
 }
 
-@media (min-width: 1366px) and (max-width: 1920px) {
+@media (min-width: 1360px) and (max-width: 1920px) {
     .header {
     background: #AB5141;
     }
@@ -817,7 +817,7 @@ html {
         text-align: right;
         color: #fff;
         padding: 5px;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .header #navbar nav{
@@ -1462,22 +1462,27 @@ html {
         margin: 0; 
     }
 
+    #table {
+        height: 40vh;
+    }
+
     .centered-table {
-        width: 50%; /* adjust size as needed */
-        margin: 20px auto; /* centers the table horizontally */
+        width: 75%; /* adjust size as needed */
+        margin: 10px auto; /* centers the table horizontally */
         border-collapse: collapse;
     }
 
     .centered-table th,
     .centered-table td {
-        border: 1px solid #AB5141;
-        padding: 8px;
-        text-align: center;
+        border: 2px solid #AB5141;
+        padding: 4px;
+        text-align: left;
     }
 
     .centered-table th {
         background-color: #AB5141;
         color: white;
+        padding: 4px;
     }
 
 
