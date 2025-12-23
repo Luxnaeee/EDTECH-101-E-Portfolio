@@ -1233,6 +1233,43 @@ html {
         font-size: 1rem;
     }
 
+    #maps {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 560px;
+        margin-left: 1rem;
+    }
+
+    #maps img{
+        width: 100%;
+        max-width: 560px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 5px;
+        border-radius: 8px;
+    }
+
+    #maps2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 560px;
+        margin-left: 1rem;
+        padding-bottom: 20px;
+    }
+
+    #maps2 img{
+        width: 100%;
+        max-width: 560px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 5px;
+        border-radius: 8px;
+    }
+
     #text{
         width: 100%;
     }
@@ -1253,6 +1290,22 @@ html {
     }
 
     #text2 p{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 2;
+        
+        padding: 10px 20px;
+    }
+
+    #text3 {
+        width: 100%;
+    }
+
+    #text3 p{
         flex: 1;
         display: flex;
         justify-content: center;
@@ -1463,7 +1516,7 @@ html {
     }
 
     #table {
-        height: 40vh;
+        height: 125%;
     }
 
     .centered-table {
