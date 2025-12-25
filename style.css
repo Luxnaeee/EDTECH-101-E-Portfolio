@@ -8,46 +8,77 @@ html {
   scroll-behavior: smooth;
 }
 
+.hamburger { 
+    display: none; 
+    font-size: 24px; 
+    cursor: pointer;
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
     .header {
-    background: #AB5141;
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        background: #AB5141; 
+        padding: 0.5rem 1rem; 
     }
 
     .header #title{
-        display: flex;
-        justify-content: flex;
+        flex: 1;
     }
 
     .header #title a{
+        font-weight: bold;
         color: white;
         text-decoration: none;
         font-size: 1.2rem;
     }
 
-    .header #navbar nav{
+    .dropdown-menu a.active:hover{
+        background-color: #AB5141;
+        color: #fff;
+    }
+
+    #navbar { 
         display: flex;
         justify-content: space-between;
         align-items: center;
-        list-style: none;
-        padding-top: 4px;
+        padding: 0.5rem 1rem; 
+        width: 100%;
     }
 
-    .header #navbar #title{
-        color: #fff;
-        padding: 10px;
-        font-weight: bold;
+    .dropdown-menu { 
+        list-style: none; 
+        display: flex; 
+        gap: 15px; 
     }
 
-    .header nav ul{
-        display: flex;
-        list-style: none;
-    }
+    .hamburger { 
+        display: block;
+        background-color: #AB5141; 
+        color: #FFF;
+        font-size: 24px; 
+        border: none; 
+        cursor: pointer;
+    } /* Hide menu on mobile until .show is added by JS */ 
+        
+    .dropdown-menu { 
+        display: none; 
+        flex-direction: column; 
+        background: #AB5141; 
+        position: absolute; 
+        top: 50px; /* adjust if needed */ 
+        right: 10px; /* adjust if needed */ 
+        padding: 10px; 
+        border-radius: 5px; 
+        z-index: 1000; /* keep it above content */ 
+    } 
+    
+    .dropdown-menu.show { 
+        display: flex; 
+    } 
 
-    .header #navbar nav li{
-        margin-bottom: 5px;
-    }
-
-    .header #navbar nav li a{
+    .dropdown-menu a{
         text-decoration: none;
         text-align: right;
         color: #fff;
@@ -55,27 +86,6 @@ html {
         padding: 10px;
         font-size: 1rem;
         transition: background-color 0.3s ease;
-    }
-
-    #navbar nav li a:hover{
-        background-color: #FFF;
-        color: #AB5141;
-        border-radius: 2px;
-        font-weight: bold;
-    }
-
-    .header #navbar nav li a.active{
-        background-color: #FFF;
-        color: #AB5141;
-        border-radius: 2rem;
-        font-weight: bold;
-        padding: 0.5rem;
-        margin-right: 7px;
-    }
-
-    #navbar nav li a.active:hover{
-        background-color: #AB5141;
-        color: #fff;
     }
 
     .front_page {
@@ -88,32 +98,31 @@ html {
     }
     
     #short_introduction {
-        max-width: 768px;
+        min-width: 320;
         margin: 0 auto;
     }
 
     #intro_text {
-        flex: 1;      
-        padding: 20px; 
-        text-align: center;  
-        font-size: 1.2rem;     
+        flex: 1;         
     }
 
     #intro_text p{
-        padding: 5px;
+        padding: 1rem; 
+        text-align: center;  
+        font-size: 2vh;
     }
 
     #my_image{
         display: flex;
-        flex: 0 0 200px;
+        flex: 0 0 30vh;
     }
 
     #my_image img {
         width: 100%;       
-        max-width: 200px;     
+        max-width: 30vh;     
         height: auto; 
         margin: 0 auto;
-        padding: 100px 0 0 0;
+        padding: 7rem 0 0 0;
     }
 
     /*Divider*/
@@ -133,33 +142,49 @@ html {
         text-align: justify;     
         width: 100%;
         min-width: 320px;
-        min-height: 54vh;
+        min-height: 100vh;
         background-color: #f2f2f2;
-    }
-
-    #basic_info {
+        padding-top: 6rem;
         margin: 0 auto;
+        display: block;
+        justify-content: center
     }
 
     #basic_info p{
-        font-size: 1rem;
+        font-size: 1.8vh;
         line-height: 2;
-        padding: 10px 20px;
+        padding: 1rem;
     }
 
     #img1 {
-        flex: 0 0 200px;
+        flex: 0 0 30vh;
         text-align: center;
     }
 
     #img1 img{
         width: 100%;
-        max-width: 200px;
+        max-width: 30vh;
         height: auto; 
         display: block;
         margin: 0 auto;
-        padding: 20px;
+        padding: 1rem;
 
+    }
+
+    #img3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 40vh;
+    }
+
+    #img3 img{
+        width: 100%;
+        max-width: 40vh;
+        height: auto; 
+        display: block;
+        margin: 0 auto;
+        border-radius: 8px;
     }
 
     /*Portfolio*/
@@ -210,25 +235,26 @@ html {
     .The-Seminar {
         display: block;
         min-width: 320px;
+        background-color: #f2f2f2;
     }
 
     .The-Seminar h1 {
-        padding: 0.5rem;
-        font-size: 1.5rem;
+        padding: 1rem;
+        font-size: 3vh;
     }
 
     .The-Seminar #text p{
         width: 95%;
         display: flex;
         text-align: justify;
-        padding: 10px;
-        font-size: 0.9rem;
+        padding: 0.5rem;
+        font-size: 2vh;
         margin: 0 auto;
     }
 
     .portfolio-start h1 {
-        padding: 0.5rem ;
-        font-size: 1.5rem;
+        padding-top: 0.8rem ;
+        font-size: 3vh;
     }
 
     #portfolio_links {
@@ -241,9 +267,9 @@ html {
 
      #portfolio_links a{
         text-decoration: none;
-        margin: 4px;
-        padding: 4px;
-        font-size: 1.0rem;
+        margin: 0.3rem;
+        padding: 0.5rem;
+        font-size: 2vh;
         background-color: #AB5141;
         color: #fff;
         border-radius: 4px;
@@ -259,7 +285,7 @@ html {
     .concept-maps {
         flex-direction: column;
         align-items: center;
-        max-width: 768px;
+        min-width: 320;
     }
 
     #concept-map-right {
@@ -267,13 +293,14 @@ html {
         flex-direction: column-reverse;
         justify-content: right;
         align-items: center;
-        flex: 0 0 275px;
-        margin-bottom: 20px;
+        flex: 0 0 30vh;
+        margin-bottom: 1rem;
     }
 
     #concept-map-left {
         width: 100%;
         margin: 1rem 0;
+        flex: 0 0 30vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -283,8 +310,8 @@ html {
     #concept-map-right img {
         max-width: 100%;
         height: auto;
-        padding: 5px;
-        max-width: 320px;
+        padding: 0.5rem;
+        max-width: 40vh;
         height: auto; 
         display: block;
         margin: 0;
@@ -299,9 +326,177 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: justify;
-        font-size: 0.9rem;
+        text-align: center;
+        font-size: 2vh;
         padding: 1rem;
+        line-height: 2;
+    }
+
+    #concept-map-lefts {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 50vh;
+        padding-left: 2.2rem;
+    }
+
+    #concept-map-lefts img{
+        width: 100%;
+        max-width: 30vh;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 0.5rem;
+        border-radius: 8px;
+    }
+
+    #concept-map-lefts p{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 1rem;
+        font-size: 2.0vh;
+    }
+
+    #concept-map-lefts-2 img{
+        width: 100%;
+        max-width: 70vh;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    #concept-map-lefts-2 p{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 2rem;
+        font-size: 2.0vh;
+    }
+
+    #concept-map-rights {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex: 0 0 50vh;
+    }
+
+    #concept-map-rights img{
+        width: 100%;
+        max-width: 50vh;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding-left: 1rem;
+        border-radius: 8px;
+    }
+
+    #concept-map-rights p{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 1rem;
+        font-size: 2.0vh;
+    }
+
+    #maps {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 50vh;
+    }
+
+    #maps img{
+        width: 100%;
+        max-width: 50vh;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding-top: 0.5rem;
+    }
+
+    #maps2 {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 50vh;
+        padding-bottom: 1rem;
+    }
+
+    #maps2 img{
+        width: 100%;
+        max-width: 50vh;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding-top: 0.5rem;
+    }
+
+    #text{
+        width: 100%;
+    }
+
+    #text p{
+        flex: 1;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: justify;
+        padding: 1rem;
+        font-size: 2.0vh;
+        line-height: 2;
+    }
+    
+    #text2 {
+        width: 100%;
+    }
+
+    #text2 p{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 2.0vh;
+        line-height: 2;
+        padding: 0.5rem 0.7rem;
+    }
+
+    #text3 {
+        width: 100%;
+    }
+
+    #text3 p{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 2.0vh;
+        line-height: 2;
+    }
+
+    #canva {
+        position: relative; 
+        width: 100%;
+        max-width: 40vh;
+        aspect-ratio: 16/9;
+        height: 100%;
+        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
+        overflow: hidden;        
+        border-radius: 8px; 
+        will-change: transform;
     }
 
     
@@ -336,17 +531,17 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
+        max-width: 34vh;
     }
 
     .video-item-right video, 
     .video-item-left video {
-        width: 70%;
+        width: 100%;
         height: auto;
         aspect-ratio: 1/1;
         object-fit: contain;
         background-color: black;
         border-radius: 8px;
-        max-width: 320x;
     }
 
     .video-item-right p,
@@ -362,34 +557,277 @@ html {
         padding: 1rem;
     }
 
+    .videos {
+        margin: 1rem auto;
+        gap: 1rem;
+    }
+
+    .videos2 {
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .video-item-left, .video-item-right { 
+        margin: 0.5rem; /* reduce margins */
+    }
+
+    .video-item-right video, 
+    .video-item-left video {
+        width: 100%;
+        max-width: 50vh;
+        height: auto;
+        border-radius: 8px;
+        background-color: black;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+        display: block;
+        
+    }
+
+    .video-item-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .video-item-lefts {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        padding-left: 4vh;
+        gap: 2rem;
+    }
+
+    .video-item-lefts p{
+        flex: 1;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: justify;
+        padding: 1.5rem;
+        font-size: 2.0vh;
+        line-height: 2;
+    }
+
+    .video-item-lefts video {
+        width: 100%;
+        max-width: 50vh;
+        height: auto;
+        border-radius: 8px;
+        background-color: black;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+        display: block;
+    }
+
+    .video-item-lefts2 video {
+        width: 100%;
+        max-width: 30vh;
+        height: auto;
+        border-radius: 8px;
+        background-color: black;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+        padding: 0.5rem;;
+    }
+
+    .video-item-lefts img{
+        width: 100%;
+        max-width: 50vh;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .video-item-lefts2 {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding-left: 2.2rem;
+    }
+
+    .video-item-lefts3 {
+        display: block;
+        justify-content: center;
+        align-items: left;
+        gap: 0.5rem;
+    }
+
+    .video-item-lefts3 img{
+        width: 100%;
+        max-width: 30vh;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding:1rem 0;
+        padding-left: 2.7rem;
+        border-radius: 8px;
+    }
+
+    .video-item-lefts3 p{
+        flex: 1;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        font-size: 2.0vh;
+        line-height: 2;
+    }
+
+    .video-item-lefts4 {
+        display: block;
+        justify-content: left;
+        align-items: left;
+        gap: 1rem;
+        flex: 0 0 40vh;
+    }
+
+    .video-item-lefts4 img{
+        width: 100%;
+        max-width: 40vh;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 0.5rem;
+        padding-bottom:1rem;
+        border-radius: 8px;
+    }
+
+    .video-item-lefts4 p{
+        flex: 1;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: center;
+        font-size: 2.0vh;
+        line-height: 2;
+    }
+
+    .video-item-lefts2 img{
+        width: 100%;
+        max-width: 560px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .video-item-left img{
+        width: 100%;
+        max-width: 560px;
+        height: auto; 
+        display: block;
+        margin: 0;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    
+
+    .video-item-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    
+    .description {
+        display: none;
+        justify-content: center;
+        align-items: left;
+        gap: 17rem;
+    }
+
+    .description p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        font-size: 2.0vh;;
+        font-weight: bold;
+    }
+
+    #session-3{ 
+        display: block;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 40vh;
+        margin: 0.5rem;
+        gap: 1rem;
+    }
+
+    #session-3 img{ 
+        width: 100%;
+        max-width: 40vh;
+        height: auto; 
+        display: flex;
+        margin: 0;
+        padding-top: 0.5rem; 
+    }
+
+    #table {
+        height: 100%;
+    }
+
+    .centered-table {
+        width: 75%; /* adjust size as needed */
+        margin: 0.5rem auto; /* centers the table horizontally */
+        border-collapse: collapse;
+    }
+
+    .centered-table th,
+    .centered-table td {
+        border: 2px solid #AB5141;
+        padding: 1rem;
+        text-align: left;
+    }
+
+    .centered-table th {
+        background-color: #AB5141;
+        color: white;
+        padding: 0.5rem;
+    }
+
+    .centered-table p {
+        font-size: 1.8vh;
+    }
+
     #socials {
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: #AB5141;
-        gap: 1px;
+        gap: 0.1rem;
         color: #fff;
-        font-size: 1rem;
+        font-size: 1.4vh;
     }
 
     #socials i{
         color: #fff;
-        font-size: 1.2rem;
+        font-size: 1.4vh;
         padding: 5px;
     }
 
     .footer #socials a{
         color: #fff;
         text-decoration: none;
-        padding: 0 10px;
+        padding: 0 0.5rem;
     }
 
     #scrollTopBtn {
     position: fixed;
-    bottom: 35px;
-    right: 20px;
-    padding: 8px 12px;
-    font-size: 10px;
+    bottom: 1.5rem;
+    right: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 2vh;
     background-color: #AB5141;
     color: white;
     border: none;
@@ -407,51 +845,58 @@ html {
 }
 
 @media (min-width: 768px) and (max-width: 1366px) {
-    .header {
-        background: #AB5141;
-        padding: 0.7rem;
+    header {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        background: #AB5141; 
+        padding: 0.5rem 1rem; 
     }
 
-    .header title{
-        display: flex;
-        justify-content: flex;
+    .header #title{
+        flex: 1;
     }
 
     .header #title a{
+        font-weight: bold;
         color: white;
         text-decoration: none;
-        font-weight: bold;
-        font-size: 3.5vh;
+        font-size: 1.2rem;
     }
 
-    .header #navbar nav{
+    #navbar { 
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        list-style: none;
+        padding: 0.5rem 1rem; 
+        width: 100%;
     }
 
-    .header nav ul{
+    #navbar ul{
         display: flex;
+        gap: 1rem;
         list-style: none;
     }
 
-    .header #navbar nav li a{
+    #navbar ul li a{
         text-decoration: none;
-        text-align: right;
-        color: #fff;
+        color: white;
+        font-size: 2vh;
         padding: 0.5rem;
-        font-size: 2.0vh;
-    }
-
-    .header #navbar nav li a:hover{
-        background-color: #FFF;
-        color: #AB5141;
-        border-radius: 2.0vh;
         font-weight: bold;
     }
 
-    .header #navbar nav li a.active{
+
+    #navbar ul li a:hover {
+        background-color: white;
+        color: #AB5141;
+        border-radius: 4px;
+    }
+    .hamburger { 
+        display: none;
+
+    }
+
+    #navbar ul li a.active{
         background-color: #FFF;
         color: #AB5141;
         border-radius: 2.0vh;
@@ -515,7 +960,7 @@ html {
 
     #my_image img{
         width: 100%;
-        max-width: 50vh;
+        max-width: 40vh;
         height: auto; 
         display: block;
         border-radius: 8px;
@@ -536,16 +981,15 @@ html {
     /*About Me*/
     .about_me {
         display: flex;
-        justify-content: flex-start; 
+        justify-content: center; 
         align-items: center;      
         width: 100%;
         background-color: #f2f2f2;
-        gap: 3rem;
+        gap: 2rem;
     }
 
     #basic_info {
         flex: 1;
-        padding: 0.2rem;
         display: flex;
         align-items: center;
         min-height: 100vh;
@@ -554,21 +998,21 @@ html {
     #basic_info p{
         font-size: 2.0vh;
         line-height: 2;
+        text-align: justify;
+        padding: 1rem;
     }
 
     #img1 {
-        flex: 0 0 50vh;
-        text-align: center;
-        padding: 0.5rem;
+        flex: 0 0 40vh;
     }
 
     #img1 img{
         width: 100%;
-        max-width: 50vh;
+        max-width: 40vh;
         height: auto; 
         display: block;
         margin: 0 auto;
-        padding: 2rem;
+        padding: 1rem;
 
     }
 
@@ -604,7 +1048,7 @@ html {
 
     #img3 img{
         width: 100%;
-        max-width: 70vh;
+        max-width: 50vh;
         height: auto; 
         display: block;
         margin: 0 auto;
@@ -621,7 +1065,7 @@ html {
 
     .The-Seminar h1 {
         padding: 1rem;
-        font-size: 5vh;
+        font-size: 4vh;
     }
 
     .The-Seminar #text p{
@@ -629,8 +1073,9 @@ html {
         display: flex;
         text-align: justify;
         padding: 0.5rem;
-        font-size: 2.0vh;
+        font-size: 2vh;
         margin: 0 auto;
+        line-height: 2;
     }
 
     .portfolio-start{
@@ -640,7 +1085,7 @@ html {
     .portfolio-start h1 {
         padding-left: 0.5rem;
         padding-top: 0.7rem;
-        font-size: 5vh;
+        font-size: 4vh;
     }
 
     .concept-maps{
@@ -666,7 +1111,7 @@ html {
 
     #concept-map-left img, #concept-map-right img{
         width: 100%;
-        max-width: 60vh;
+        max-width: 50vh;
         height: auto; 
         display: block;
         margin: 0;
@@ -696,7 +1141,7 @@ html {
 
     #concept-map-lefts img{
         width: 100%;
-        max-width: 40vh;
+        max-width: 30vh;
         height: auto; 
         display: block;
         margin: 0;
@@ -774,7 +1219,7 @@ html {
 
     #maps img{
         width: 100%;
-        max-width: 70vh;
+        max-width: 44vh;
         height: auto; 
         display: block;
         margin: 0;
@@ -786,33 +1231,18 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex: 0 0 70vh;
+        flex: 0 0 50vh;
         padding-bottom: 1rem;
     }
 
     #maps2 img{
         width: 100%;
-        max-width: 70vh;
+        max-width: 44vh;
         height: auto; 
         display: block;
         margin: 0;
         padding: 0.5rem;
         border-radius: 8px;
-    }
-
-    #text{
-        width: 100%;
-    }
-
-    #text p{
-        flex: 1;
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        text-align: justify;
-        padding: 1rem;
-        font-size: 1.2rem;
-        line-height: 2;
     }
     
     #text2 {
@@ -840,7 +1270,7 @@ html {
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 3.5vh;
+        font-size: 3.4vh;
         line-height: 2;
     }
     
@@ -848,7 +1278,7 @@ html {
         position: relative; 
         margin-left: 0.5rem;
         width: 100%;
-        max-width: 400px;
+        max-width: 50vh;
         aspect-ratio: 16/9;
         height: 100%;
         padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
@@ -875,7 +1305,7 @@ html {
     .video-item-right video, 
     .video-item-left video {
         width: 100%;
-        max-width: 50vh;
+        max-width: 40vh;
         height: auto;
         border-radius: 8px;
         background-color: black;
@@ -896,7 +1326,7 @@ html {
         display: flex;
         justify-content: left;
         align-items: left;
-        padding-left: 5vh;
+        padding-left: 4vh;
         gap: 2rem;
     }
 
@@ -924,7 +1354,7 @@ html {
 
     .video-item-lefts2 video {
         width: 100%;
-        max-width: 50vh;
+        max-width: 40vh;
         height: auto;
         border-radius: 8px;
         background-color: black;
@@ -960,7 +1390,7 @@ html {
 
     .video-item-lefts3 img{
         width: 100%;
-        max-width: 50vh;
+        max-width: 40vh;
         height: auto; 
         display: block;
         margin: 0;
@@ -984,14 +1414,14 @@ html {
         display: flex;
         justify-content: left;
         align-items: left;
-        padding-left: 2rem;
+        padding-left: 1rem;
         gap: 1rem;
         flex: 0 0 70vh;
     }
 
     .video-item-lefts4 img{
         width: 100%;
-        max-width: 70vh;
+        max-width: 50vh;
         height: auto; 
         display: block;
         margin: 0;
@@ -1044,7 +1474,7 @@ html {
         display: flex;
         justify-content: center;
         align-items: left;
-        gap: 17rem;
+        gap: 25rem;
     }
 
     .description p {
@@ -1096,6 +1526,11 @@ html {
         padding: 0.5rem;
     }
 
+    .centered-table p {
+        font-size: 2vh;
+        line-height: 1.5;
+    }
+
     #socials {
         display: flex;
         justify-content: right;
@@ -1120,7 +1555,7 @@ html {
     
     #scrollTopBtn {
     position: fixed;
-    bottom: 35px;
+    bottom: 3rem;
     right: 1rem;
     padding: 0.3rem 0.6rem;
     font-size: 1.2rem;
@@ -1141,66 +1576,69 @@ html {
 }
 
 @media (min-width: 1366px) and (max-width: 1920px) {
-    .header {
-    background: #AB5141;
+    header {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        background: #AB5141; 
+        padding: 0.5rem 1rem; 
     }
 
     .header #title{
-        display: flex;
-        justify-content: flex;
+        flex: 1;
     }
 
     .header #title a{
+        font-weight: bold;
+        color: white;
         text-decoration: none;
-        text-align: right;
-        color: #fff;
-        padding: 5px;
-        font-size: 3.5vh;
+        font-size: 1.2rem;
     }
 
-    .header #navbar nav{
+    #navbar { 
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        list-style: none;
+        padding: 0.5rem 1rem; 
+        width: 100%;
     }
 
-    .header #navbar #title{
-        color: #fff;
-        padding: 0.7rem;
-        font-weight: bold;
-    }
-
-    .header nav ul{
+    #navbar ul{
         display: flex;
+        gap: 1rem;
         list-style: none;
     }
 
-    .header #navbar nav li a{
+    #navbar ul li a{
         text-decoration: none;
-        text-align: right;
-        color: #fff;
-        margin: 0.5rem;
+        color: white;
+        font-size: 2vh;
         padding: 0.5rem;
-        font-size: 2.0vh;
-    }
-
-    .header #navbar nav li a:hover{
-        background-color: #FFF;
-        color: #AB5141;
-        border-radius: 2rem;
         font-weight: bold;
     }
 
-    .header #navbar nav li a.active:hover {
-        background-color:#AB5141;
-        color: #FFF;
+
+    #navbar ul li a:hover {
+        background-color: white;
+        color: #AB5141;
+        border-radius: 4px;
+    }
+    .hamburger { 
+        display: none;
+
     }
 
-    .header #navbar nav li a.active{
+    #navbar ul li a.active{
         background-color: #FFF;
         color: #AB5141;
-        border-radius: 2rem;
+        border-radius: 2.0vh;
+        font-weight: bold;
+        padding: 0.5rem;
+    }
+
+    #navbar ul li a.active:hover{
+        background-color: #AB5141;
+        color: #fff;
+        border-radius: 2.0vh;
         font-weight: bold;
         padding: 0.5rem;
     }
@@ -1323,7 +1761,7 @@ html {
 
     /*Portfolio*/
     .group_intro{
-        min-height: 75vh;
+        min-height: 74vh;
         background-color: #f2f2f2;
 
     }
@@ -1403,7 +1841,7 @@ html {
     .The-Seminar h1 {
         padding-top: 1rem;
         padding-left: 1rem;
-        font-size: 5vh;
+        font-size: 4vh;
     }
 
     .The-Seminar #text p{
@@ -1683,7 +2121,7 @@ html {
     .video-item-right video, 
     .video-item-left video {
         width: 100%;
-        max-width: 30vh;
+        max-width: 40vh;
         height: auto;
         border-radius: 8px;
         background-color: black;
@@ -1778,7 +2216,7 @@ html {
         border-radius: 8px;
     }
 
-    .video-item-lefts4 p{
+    .video-item-lefts3 p{
         flex: 1;
         display: flex;
         justify-content: left;
@@ -1908,6 +2346,7 @@ html {
 
     .centered-table p{
         font-size: 2.0vh;
+        line-height: 1.5;
     }
 
 

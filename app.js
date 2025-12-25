@@ -10,3 +10,21 @@ window.scrollTo({
     behavior: "smooth"
 });
 });
+
+/// script.js
+const hamburger = document.getElementById('hamburger');
+const dropdownMenu = document.getElementById('dropdown-menu');
+
+hamburger.addEventListener('click', () => {
+  const isOpen = dropdownMenu.classList.toggle('show');
+  hamburger.setAttribute('aria-expanded', isOpen);
+});
+
+// Optional: close when clicking a link (for mobile UX)
+dropdownMenu.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') {
+    dropdownMenu.classList.remove('show');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+});
+
